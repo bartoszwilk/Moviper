@@ -13,7 +13,7 @@ import com.mateuszkoslacz.moviper.base.view.activity.ViperActivity;
 
 public class CustomViperActivity extends ViperActivity<MvpView, MvpPresenter<MvpView>> {
 
-    private ActivityMvpDelegate<MvpView, MvpPresenter<MvpView>> mvpDelegate;
+    private ActivityMvpDelegate<MvpView, MvpPresenter<MvpView>> mMvpDelegate;
 
     @NonNull
     @Override
@@ -24,10 +24,10 @@ public class CustomViperActivity extends ViperActivity<MvpView, MvpPresenter<Mvp
     @NonNull
     @Override
     protected ActivityMvpDelegate<MvpView, MvpPresenter<MvpView>> getMvpDelegate() {
-        return mvpDelegate;
+        return mMvpDelegate;
     }
 
-    public void setMvpDelegate(ActivityMvpDelegate<MvpView, MvpPresenter<MvpView>> delegate) {
-        mvpDelegate = delegate;
+    public void setmMvpDelegate(ActivityMvpDelegate<MvpView, MvpPresenter<MvpView>> delegate) {
+        mMvpDelegate = delegate;
     }
 }
