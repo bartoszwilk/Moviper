@@ -1,4 +1,4 @@
-package com.mateuszkoslacz.moviper.presenterbus.presenterTest;
+package com.mateuszkoslacz.moviper.rxpresenter;
 
 import android.support.annotation.NonNull;
 
@@ -14,14 +14,14 @@ import com.mateuszkoslacz.moviper.iface.routing.ViperRxRouting;
  * Created by bwilk on 12/20/16.
  */
 
-public class TestPresenter
+public class CustomPresenter
         extends BaseRxPresenter<MvpView,
         ViperRxInteractor,
         ViperRxRouting>
         implements MvpPresenter<MvpView> {
 
-    BaseRxRouting routing;
-    BaseRxInteractor interactor;
+    private BaseRxRouting routing;
+    private BaseRxInteractor interactor;
 
     @NonNull
     @Override

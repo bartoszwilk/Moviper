@@ -1,9 +1,10 @@
-package com.mateuszkoslacz.moviper.presenterbus;
+package com.mateuszkoslacz.moviper.rxpresenter;
 
 import com.mateuszkoslacz.moviper.base.interactor.BaseRxInteractor;
 import com.mateuszkoslacz.moviper.base.routing.BaseRxRouting;
-import com.mateuszkoslacz.moviper.presenterbus.presenterTest.TestPresenter;
+import com.mateuszkoslacz.moviper.presenterbus.Moviper;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
@@ -24,11 +25,16 @@ public class ViperRxPresenterTest {
     BaseRxInteractor baseRxInteractor;
 
     @InjectMocks
-    TestPresenter presenter = new TestPresenter();
+    CustomPresenter presenter = new CustomPresenter();
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
+    }
+
+    @After
+    public void cleanUp() {
+        Moviper.getInstance().unregister(presenter);
     }
 
     @Test
