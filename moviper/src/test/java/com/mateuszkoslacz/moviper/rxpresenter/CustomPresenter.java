@@ -20,18 +20,18 @@ public class CustomPresenter
         ViperRxRouting>
         implements MvpPresenter<MvpView> {
 
-    private BaseRxRouting routing;
-    private BaseRxInteractor interactor;
+    private BaseRxRouting mRouting;
+    private BaseRxInteractor mInteractor;
 
     @NonNull
     @Override
     public ViperRxInteractor createInteractor() {
-        return interactor;
+        return mInteractor;
     }
 
     @NonNull
     @Override
     public ViperRxRouting createRouting() {
-        return routing;
+        return mRouting;
     }
 }

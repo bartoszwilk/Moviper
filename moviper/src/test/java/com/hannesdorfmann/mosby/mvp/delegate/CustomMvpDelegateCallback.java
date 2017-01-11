@@ -9,7 +9,8 @@ import com.hannesdorfmann.mosby.mvp.MvpView;
  * Created by bwilk on 12/21/16.
  */
 
-public class CustomMvpDelegateCallback implements ActivityMvpDelegateCallback<MvpView, MvpPresenter<MvpView>> {
+public class CustomMvpDelegateCallback
+        implements ActivityMvpDelegateCallback<MvpView, MvpPresenter<MvpView>> {
 
     private MvpPresenter<MvpView> mPresenter;
 

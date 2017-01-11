@@ -4,16 +4,17 @@ import com.hannesdorfmann.mosby.mvp.MvpPresenter;
 import com.hannesdorfmann.mosby.mvp.MvpView;
 
 
-
 /**
  * Created by bwilk on 12/21/16.
  */
 
-public class CustomActivityMvpDelegate extends ActivityMvpDelegateImpl<MvpView, MvpPresenter<MvpView>> {
+public class CustomActivityMvpDelegate
+        extends ActivityMvpDelegateImpl<MvpView, MvpPresenter<MvpView>> {
 
     private MvpInternalDelegate<MvpView, MvpPresenter<MvpView>> mInternalDelegate;
 
-    public CustomActivityMvpDelegate(ActivityMvpDelegateCallback<MvpView, MvpPresenter<MvpView>> delegateCallback) {
+    public CustomActivityMvpDelegate(ActivityMvpDelegateCallback<MvpView,
+            MvpPresenter<MvpView>> delegateCallback) {
         super(delegateCallback);
     }
 
@@ -22,7 +23,8 @@ public class CustomActivityMvpDelegate extends ActivityMvpDelegateImpl<MvpView, 
         return mInternalDelegate;
     }
 
-    public void setInternalDelegate(MvpInternalDelegate<MvpView, MvpPresenter<MvpView>> internalDelegate) {
+    public void setInternalDelegate(MvpInternalDelegate<MvpView,
+            MvpPresenter<MvpView>> internalDelegate) {
         this.mInternalDelegate = internalDelegate;
     }
 }

@@ -27,7 +27,7 @@ public class CustomViperActivity extends ViperActivity<MvpView, MvpPresenter<Mvp
         return mMvpDelegate;
     }
 
-    public void setmMvpDelegate(ActivityMvpDelegate<MvpView, MvpPresenter<MvpView>> delegate) {
+    public void setMvpDelegate(ActivityMvpDelegate<MvpView, MvpPresenter<MvpView>> delegate) {
         mMvpDelegate = delegate;
     }
 }

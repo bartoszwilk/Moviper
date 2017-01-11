@@ -36,7 +36,7 @@ public class ViperActivityTest {
 
     @Test
     public void shouldMvpDelegateInvokeOnCreateWhenActivityStarted() {
-        mActivity.setmMvpDelegate(mMvpDelegate);
+        mActivity.setMvpDelegate(mMvpDelegate);
         mTestActivityLifecycleController.create();
         Mockito.verify(mMvpDelegate).onCreate(Mockito.any());
     }
